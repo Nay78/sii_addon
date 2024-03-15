@@ -1,11 +1,11 @@
 {
   "name": "sii_addon",
   "version": "1.0.0",
-  "description": "Integraci\u00f3n de SII.",
+  "description": "Integración de SII.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd siicl && yarn install",
+    "postinstall": "cd siicl && yarn install && cd ../services && yarn install",
     "dev": "cd siicl && yarn dev",
     "build": "cd siicl && yarn build"
   },

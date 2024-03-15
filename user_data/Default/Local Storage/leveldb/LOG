@@ -1,2 +1,0 @@
-2024/03/14-15:26:33.715 4 Creating DB /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/Local Storage/leveldb since it was missing.
-2024/03/14-15:26:33.723 4 Reusing MANIFEST /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/Local Storage/leveldb/MANIFEST-000001

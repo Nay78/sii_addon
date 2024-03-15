@@ -1,2 +1,0 @@
-2024/03/14-15:26:33.707 1b1c Creating DB /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/Sync Data/LevelDB since it was missing.
-2024/03/14-15:26:33.716 1b1c Reusing MANIFEST /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/Sync Data/LevelDB/MANIFEST-000001
