@@ -1,0 +1,2 @@
+2024/03/14-15:26:34.088 1b1c Creating DB /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/shared_proto_db since it was missing.
+2024/03/14-15:26:34.094 1b1c Reusing MANIFEST /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/shared_proto_db/MANIFEST-000001

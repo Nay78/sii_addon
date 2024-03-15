@@ -5,3 +5,7 @@
 tags
 node_modules
 __pycache__
+downloads
+user_data
+/services/user_data
+/services/downloads

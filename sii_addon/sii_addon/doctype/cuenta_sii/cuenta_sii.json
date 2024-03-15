@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-15 00:26:54.149350",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rut",
+  "clave_tributaria",
+  "freq",
+  "response"
+ ],
+ "fields": [
+  {
+   "fieldname": "rut",
+   "fieldtype": "Data",
+   "label": "RUT"
+  },
+  {
+   "fieldname": "clave_tributaria",
+   "fieldtype": "Password",
+   "label": "Clave tributaria"
+  },
+  {
+   "fieldname": "freq",
+   "fieldtype": "Select",
+   "label": "Frecuencia (placeholder)",
+   "options": "Hourly\nDaily\nWeekly"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Long Text",
+   "label": "LastResponse"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-15 00:44:55.301138",
+ "modified_by": "Administrator",
+ "module": "SII Addon",
+ "name": "Cuenta SII",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

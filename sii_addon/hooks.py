@@ -133,23 +133,23 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"sii_addon.tasks.all"
-# 	],
-# 	"daily": [
-# 		"sii_addon.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"sii_addon.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"sii_addon.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"sii_addon.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"sii_addon.tasks.all"
+	# ],
+	# "daily": [
+	# 	"sii_addon.tasks.daily"
+	# ],
+	"hourly": [
+		"sii_addon.doctype.cuenta_sii.cuenta_sii.scrappe"
+	],
+	# "weekly": [
+	# 	"sii_addon.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"sii_addon.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
@@ -227,3 +227,5 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+website_route_rules = [{'from_route': '/siicl/<path:app_path>', 'to_route': 'siicl'},]

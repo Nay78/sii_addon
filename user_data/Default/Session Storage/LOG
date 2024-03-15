@@ -1,0 +1,2 @@
+2024/03/14-15:26:33.896 4 Creating DB /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/Session Storage since it was missing.
+2024/03/14-15:26:33.903 4 Reusing MANIFEST /opt/bench/frappe-bench/apps/sii_addon/user_data/Default/Session Storage/MANIFEST-000001

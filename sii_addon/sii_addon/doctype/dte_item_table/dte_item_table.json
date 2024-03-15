@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-14 02:48:38.112111",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nrolindet",
+  "tpocodigo",
+  "vlrcodigo",
+  "nmbitem",
+  "qtyitem",
+  "unmditem",
+  "prcitem",
+  "montoitem"
+ ],
+ "fields": [
+  {
+   "fieldname": "nrolindet",
+   "fieldtype": "Data",
+   "label": "NroLinDet"
+  },
+  {
+   "fieldname": "tpocodigo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "TpoCodigo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vlrcodigo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "VlrCodigo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nmbitem",
+   "fieldtype": "Data",
+   "label": "NmbItem"
+  },
+  {
+   "fieldname": "qtyitem",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "QtyItem",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unmditem",
+   "fieldtype": "Data",
+   "label": "UnmdItem"
+  },
+  {
+   "fieldname": "prcitem",
+   "fieldtype": "Data",
+   "label": "PrcItem"
+  },
+  {
+   "fieldname": "montoitem",
+   "fieldtype": "Data",
+   "label": "MontoItem"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-14 03:00:11.527283",
+ "modified_by": "Administrator",
+ "module": "SII Addon",
+ "name": "DTE Item Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

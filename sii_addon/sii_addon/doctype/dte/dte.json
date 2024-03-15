@@ -1,0 +1,325 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-14 02:22:41.923319",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_37jg",
+  "amended_from",
+  "emisor",
+  "xml",
+  "receptor_section",
+  "rutrecep",
+  "cdgintrecep",
+  "rznsocrecep",
+  "girorecep",
+  "dirrecep",
+  "cmnarecep",
+  "ciudadrecep",
+  "dirpostal",
+  "cmnapostal",
+  "ciudadpostal",
+  "section_break_xcxm",
+  "rutemisor",
+  "rznsoc",
+  "giroemis",
+  "acteco",
+  "dirorigen",
+  "cmnaorigen",
+  "ciudadorigen",
+  "cdgvendedor",
+  "section_break_utia",
+  "tipodte",
+  "folio",
+  "fchemis",
+  "tipodespacho",
+  "fmapago",
+  "fchvenc",
+  "totales_section",
+  "mntneto",
+  "tasaiva",
+  "iva",
+  "mnttotal",
+  "tab_2_tab",
+  "x_section",
+  "tsted",
+  "tmstfirma",
+  "signature_section",
+  "digestvalue",
+  "signaturevalue",
+  "rsakeyvalue",
+  "x509certificate",
+  "items_tab",
+  "detalle"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_37jg",
+   "fieldtype": "Section Break",
+   "label": "FOLIO"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DTE",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "folio",
+   "fieldtype": "Data",
+   "label": "Folio"
+  },
+  {
+   "fieldname": "emisor",
+   "fieldtype": "Data",
+   "label": "EMISOR"
+  },
+  {
+   "fieldname": "xml",
+   "fieldtype": "Code",
+   "label": "XML DATA"
+  },
+  {
+   "fieldname": "section_break_utia",
+   "fieldtype": "Section Break",
+   "label": "IdDoc"
+  },
+  {
+   "fieldname": "tipodte",
+   "fieldtype": "Data",
+   "label": "TipoDTE"
+  },
+  {
+   "fieldname": "fchemis",
+   "fieldtype": "Data",
+   "label": "FchEmis"
+  },
+  {
+   "fieldname": "tipodespacho",
+   "fieldtype": "Data",
+   "label": "TipoDespacho"
+  },
+  {
+   "fieldname": "fmapago",
+   "fieldtype": "Data",
+   "label": "FmaPago"
+  },
+  {
+   "fieldname": "fchvenc",
+   "fieldtype": "Data",
+   "label": "FchVenc"
+  },
+  {
+   "fieldname": "section_break_xcxm",
+   "fieldtype": "Section Break",
+   "label": "Emisor"
+  },
+  {
+   "fieldname": "rutemisor",
+   "fieldtype": "Data",
+   "label": "RUTEmisor"
+  },
+  {
+   "fieldname": "rznsoc",
+   "fieldtype": "Data",
+   "label": "RznSoc"
+  },
+  {
+   "fieldname": "giroemis",
+   "fieldtype": "Data",
+   "label": "GiroEmis"
+  },
+  {
+   "fieldname": "acteco",
+   "fieldtype": "Data",
+   "label": "Acteco"
+  },
+  {
+   "fieldname": "dirorigen",
+   "fieldtype": "Data",
+   "label": "DirOrigen"
+  },
+  {
+   "fieldname": "cmnaorigen",
+   "fieldtype": "Data",
+   "label": "CmnaOrigen"
+  },
+  {
+   "fieldname": "ciudadorigen",
+   "fieldtype": "Data",
+   "label": "CiudadOrigen"
+  },
+  {
+   "fieldname": "cdgvendedor",
+   "fieldtype": "Data",
+   "label": "CdgVendedor"
+  },
+  {
+   "fieldname": "receptor_section",
+   "fieldtype": "Section Break",
+   "label": "Receptor"
+  },
+  {
+   "fieldname": "rutrecep",
+   "fieldtype": "Data",
+   "label": "RUTRecep"
+  },
+  {
+   "fieldname": "cdgintrecep",
+   "fieldtype": "Data",
+   "label": "CdgIntRecep"
+  },
+  {
+   "fieldname": "rznsocrecep",
+   "fieldtype": "Data",
+   "label": "RznSocRecep"
+  },
+  {
+   "fieldname": "girorecep",
+   "fieldtype": "Data",
+   "label": "GiroRecep"
+  },
+  {
+   "fieldname": "dirrecep",
+   "fieldtype": "Data",
+   "label": "DirRecep"
+  },
+  {
+   "fieldname": "cmnarecep",
+   "fieldtype": "Data",
+   "label": "CmnaRecep"
+  },
+  {
+   "fieldname": "ciudadrecep",
+   "fieldtype": "Data",
+   "label": "CiudadRecep"
+  },
+  {
+   "fieldname": "dirpostal",
+   "fieldtype": "Data",
+   "label": "DirPostal"
+  },
+  {
+   "fieldname": "cmnapostal",
+   "fieldtype": "Data",
+   "label": "CmnaPostal"
+  },
+  {
+   "fieldname": "ciudadpostal",
+   "fieldtype": "Data",
+   "label": "CiudadPostal"
+  },
+  {
+   "fieldname": "totales_section",
+   "fieldtype": "Section Break",
+   "label": "Totales"
+  },
+  {
+   "fieldname": "mntneto",
+   "fieldtype": "Data",
+   "label": "MntNeto"
+  },
+  {
+   "fieldname": "tasaiva",
+   "fieldtype": "Data",
+   "label": "TasaIVA"
+  },
+  {
+   "fieldname": "iva",
+   "fieldtype": "Data",
+   "label": "IVA"
+  },
+  {
+   "fieldname": "mnttotal",
+   "fieldtype": "Data",
+   "label": "MntTotal"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Firmas"
+  },
+  {
+   "fieldname": "x_section",
+   "fieldtype": "Section Break",
+   "label": "X"
+  },
+  {
+   "fieldname": "tsted",
+   "fieldtype": "Date",
+   "label": "TSTED"
+  },
+  {
+   "fieldname": "tmstfirma",
+   "fieldtype": "Date",
+   "label": "TmstFirma"
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "digestvalue",
+   "fieldtype": "Data",
+   "label": "DigestValue"
+  },
+  {
+   "fieldname": "signaturevalue",
+   "fieldtype": "Data",
+   "label": "SignatureValue"
+  },
+  {
+   "fieldname": "rsakeyvalue",
+   "fieldtype": "Data",
+   "label": "RSAKeyValue"
+  },
+  {
+   "fieldname": "x509certificate",
+   "fieldtype": "Data",
+   "label": "X509Certificate"
+  },
+  {
+   "fieldname": "items_tab",
+   "fieldtype": "Tab Break",
+   "label": "Items"
+  },
+  {
+   "fieldname": "detalle",
+   "fieldtype": "Table",
+   "label": "Detalle",
+   "options": "DTE Item Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-14 03:01:09.114541",
+ "modified_by": "Administrator",
+ "module": "SII Addon",
+ "name": "DTE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
