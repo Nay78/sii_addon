@@ -1,20 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:rut",
  "creation": "2024-03-15 00:26:54.149350",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "active",
   "rut",
   "clave_tributaria",
   "freq",
-  "response"
+  "response",
+  "latest_file",
+  "latest_file_date"
  ],
  "fields": [
   {
    "fieldname": "rut",
    "fieldtype": "Data",
-   "label": "RUT"
+   "label": "RUT",
+   "unique": 1
   },
   {
    "fieldname": "clave_tributaria",
@@ -31,14 +36,40 @@
    "fieldname": "response",
    "fieldtype": "Long Text",
    "label": "LastResponse"
+  },
+  {
+   "default": "0",
+   "fetch_if_empty": 1,
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "latest_file",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Latest file",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "latest_file_date",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Latest file date",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-15 00:44:55.301138",
+ "modified": "2024-03-19 02:51:54.262024",
  "modified_by": "Administrator",
  "module": "SII Addon",
  "name": "Cuenta SII",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

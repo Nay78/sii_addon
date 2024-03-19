@@ -63,8 +63,12 @@ async function getDTE() {
   if (page.url().includes("InicioAutenticacion")) {
     await (await page.$("#rutcntr")).type(RUT);
     await (await page.$("#clave")).type(PWD);
+    // wait 100 ms
+    await new Promise((resolve) => setTimeout(resolve, 100));
     await (await page.$("#bt_ingresar")).click();
   }
+
+  await page.waitForNavigation();
 
   // click download
   let lock = true;
@@ -81,7 +85,7 @@ async function getDTE() {
       const filename = contenttype.split("filename=")[1];
 
       // check if filename is in download path:
-      result["path"] = path.join(downloadPath, filename);
+      result["path"] = path.resolve(downloadPath, filename);
       result["data"] = await waitForFileAndReadContents(path.join(downloadPath, filename));
       // console.log(f); // OUTPUT
       lock = false;
@@ -146,7 +150,8 @@ async function main() {
   //     }
   //   });
   // }
-  console.log(dte.data);
+  console.log(dte.path);
+  // console.log(dte.data);
   if (dte.data) {
     process.exit(0);
   }

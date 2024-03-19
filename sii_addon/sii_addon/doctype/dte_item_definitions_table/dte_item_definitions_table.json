@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nmbitem",
+ "creation": "2024-03-16 02:08:25.644708",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ignore",
+  "isregex",
+  "nmbitem",
+  "qty_multiplier",
+  "item",
+  "default_warehouse",
+  "uom"
+ ],
+ "fields": [
+  {
+   "fieldname": "nmbitem",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NmbItem",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "isregex",
+   "fieldtype": "Check",
+   "label": "isRegex"
+  },
+  {
+   "default": "0",
+   "fieldname": "ignore",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Ignore"
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "default_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fetch_from": "item.weight_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "default": "1",
+   "fetch_from": "item.allow_negative_stock",
+   "fieldname": "qty_multiplier",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "qty multiplier"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-19 03:16:45.158001",
+ "modified_by": "Administrator",
+ "module": "SII Addon",
+ "name": "DTE Item Definitions Table",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

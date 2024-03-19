@@ -1,14 +1,23 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "field:id",
  "creation": "2024-03-14 02:22:41.923319",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_37jg",
   "amended_from",
-  "emisor",
-  "xml",
+  "id",
+  "cuenta_sii",
+  "section_break_xcxm",
+  "rutemisor",
+  "rznsoc",
+  "giroemis",
+  "acteco",
+  "dirorigen",
+  "cmnaorigen",
+  "ciudadorigen",
+  "cdgvendedor",
   "receptor_section",
   "rutrecep",
   "cdgintrecep",
@@ -20,15 +29,6 @@
   "dirpostal",
   "cmnapostal",
   "ciudadpostal",
-  "section_break_xcxm",
-  "rutemisor",
-  "rznsoc",
-  "giroemis",
-  "acteco",
-  "dirorigen",
-  "cmnaorigen",
-  "ciudadorigen",
-  "cdgvendedor",
   "section_break_utia",
   "tipodte",
   "folio",
@@ -57,7 +57,7 @@
   {
    "fieldname": "section_break_37jg",
    "fieldtype": "Section Break",
-   "label": "FOLIO"
+   "label": "Info"
   },
   {
    "fieldname": "amended_from",
@@ -72,17 +72,8 @@
   {
    "fieldname": "folio",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Folio"
-  },
-  {
-   "fieldname": "emisor",
-   "fieldtype": "Data",
-   "label": "EMISOR"
-  },
-  {
-   "fieldname": "xml",
-   "fieldtype": "Code",
-   "label": "XML DATA"
   },
   {
    "fieldname": "section_break_utia",
@@ -96,7 +87,7 @@
   },
   {
    "fieldname": "fchemis",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
    "label": "FchEmis"
   },
   {
@@ -111,7 +102,7 @@
   },
   {
    "fieldname": "fchvenc",
-   "fieldtype": "Data",
+   "fieldtype": "Datetime",
    "label": "FchVenc"
   },
   {
@@ -127,6 +118,7 @@
   {
    "fieldname": "rznsoc",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "RznSoc"
   },
   {
@@ -251,12 +243,13 @@
   },
   {
    "fieldname": "tsted",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
    "label": "TSTED"
   },
   {
    "fieldname": "tmstfirma",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "TmstFirma"
   },
   {
@@ -271,7 +264,7 @@
   },
   {
    "fieldname": "signaturevalue",
-   "fieldtype": "Data",
+   "fieldtype": "Long Text",
    "label": "SignatureValue"
   },
   {
@@ -281,7 +274,7 @@
   },
   {
    "fieldname": "x509certificate",
-   "fieldtype": "Data",
+   "fieldtype": "Long Text",
    "label": "X509Certificate"
   },
   {
@@ -294,15 +287,29 @@
    "fieldtype": "Table",
    "label": "Detalle",
    "options": "DTE Item Table"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "cuenta_sii",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Cuenta SII",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-14 03:01:09.114541",
+ "modified": "2024-03-19 14:26:41.118441",
  "modified_by": "Administrator",
  "module": "SII Addon",
  "name": "DTE",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

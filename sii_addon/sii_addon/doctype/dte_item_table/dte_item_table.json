@@ -24,21 +24,19 @@
   {
    "fieldname": "tpocodigo",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "TpoCodigo",
-   "reqd": 1
+   "label": "TpoCodigo"
   },
   {
    "fieldname": "vlrcodigo",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "VlrCodigo",
-   "reqd": 1
+   "label": "VlrCodigo"
   },
   {
    "fieldname": "nmbitem",
    "fieldtype": "Data",
-   "label": "NmbItem"
+   "in_list_view": 1,
+   "label": "NmbItem",
+   "reqd": 1
   },
   {
    "fieldname": "qtyitem",
@@ -55,18 +53,20 @@
   {
    "fieldname": "prcitem",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "PrcItem"
   },
   {
    "fieldname": "montoitem",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "MontoItem"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-14 03:00:11.527283",
+ "modified": "2024-03-17 23:57:26.647822",
  "modified_by": "Administrator",
  "module": "SII Addon",
  "name": "DTE Item Table",
