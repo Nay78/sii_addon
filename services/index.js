@@ -50,7 +50,7 @@ async function waitForFileAndReadContents(filePath) {
 async function getDTE() {
   let result = { data: null, path: null };
   const browser = await puppetteer.launch({
-    headless: false,
+    headless: true,
     userDataDir: "./user_data",
   });
   const page = await browser.newPage();

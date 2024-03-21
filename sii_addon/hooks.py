@@ -141,7 +141,7 @@ scheduler_events = {
 	# 	"sii_addon.tasks.daily"
 	# ],
 	"hourly": [
-		"sii_addon.doctype.cuenta_sii.cuenta_sii.scrappe"
+		"sii_addon.sii_addon.doctype.cuenta_sii.cuenta_sii.scrappe"
 	],
 	# "weekly": [
 	# 	"sii_addon.tasks.weekly"
