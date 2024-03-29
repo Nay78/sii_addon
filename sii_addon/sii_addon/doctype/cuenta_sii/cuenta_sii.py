@@ -80,9 +80,11 @@ def scrappe():
 		if not cuenta.active:
 			continue
 		cuenta_doc = frappe.get_doc('Cuenta SII', cuenta.name)
+		print("OBTENIENDO CUENTA DOC:", cuenta_doc.name)
 
 		# DON'T SCRAPE IF LATEST FILE DATE IS LESS THAN 1 HOUR
-		if not cuenta_doc.latest_file_date or (datetime.now() - cuenta_doc.latest_file_date) > timedelta(hours=1):
+		if not cuenta_doc.latest_file_date or (datetime.now() - cuenta_doc.latest_file_date) > timedelta(hours=0):
+			print("SCRAPING NEEDED")
 			rut = cuenta.rut
 			clave_tributaria = cuenta_doc.get_password('clave_tributaria')
 
@@ -103,13 +105,16 @@ def scrappe():
 			# frappe.msgprint(_("This is a toast message"), title=("Information"), indicator='green')
 
 			result = process.stdout.read().strip()  # path
+			print("SII RESULT:", result)
 
-			cuenta_doc.latest_file = result
-			cuenta_doc.latest_file_date = datetime.now()
+			if result:
+				cuenta_doc.latest_file = result
+				cuenta_doc.latest_file_date = datetime.now()
 			cuenta_doc.save()
 			frappe.db.commit()
 		
 		else:
+			print("NO SCRAPING NEEDED")
 			result = cuenta_doc.latest_file
 		# result = "/opt/bench/frappe-bench/sites/downloads/DTE_DOWN778327462024-03-16.xml"
 		
