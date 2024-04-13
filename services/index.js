@@ -9,6 +9,17 @@ const args = process.argv.slice(2);
 const RUT = args[0];
 const PWD = args[1];
 
+function generateDate() {
+  const date = new Date();
+  date.setDate(date.getDate() - 7);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed in JavaScript
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+const FEC_DESDE = args[2] || generateDate();
+
 if (args.length < 2) {
   console.log("args", args);
   console.log("Please provide RUT and password");
@@ -16,6 +27,7 @@ if (args.length < 2) {
 }
 
 const URL1 = "https://www1.sii.cl/cgi-bin/Portal001/mipeLaunchPage.cgi?OPCION=1&TIPO=4";
+const URL2 = `https://www1.sii.cl/cgi-bin/Portal001/mipeAdminDocsRcp.cgi?RUT_EMI=&FOLIO=&RZN_SOC=&FEC_DESDE=${FEC_DESDE}&FEC_HASTA=&TPO_DOC=&ESTADO=&ORDEN=&NUM_PAG=1`;
 const downloadPath = path.resolve("./downloads");
 const userDataDir = path.resolve("./user_data");
 if (!fs.existsSync(downloadPath)) {
@@ -68,6 +80,9 @@ async function getDTE() {
     await (await page.$("#bt_ingresar")).click();
   }
 
+  // go to url considering the from_date (SII doesn't allow 20+ DTE downloads)
+  await page.waitForNavigation();
+  await page.goto(URL2);
   await page.waitForNavigation();
 
   // click download
